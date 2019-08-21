@@ -1,0 +1,25 @@
+{
+  "name": "curriculum_Demo",
+  "version": "1.0.0",
+  "description": "It is my first try to make a curriculum small application\r author:赵秋明\r date:2019/8/21",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lancer-Go/curriculum_Demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lancer-Go/curriculum_Demo/issues"
+  },
+  "homepage": "https://github.com/Lancer-Go/curriculum_Demo#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.2.1",
+    "eslint-config-alloy": "^2.0.5"
+  }
+}
