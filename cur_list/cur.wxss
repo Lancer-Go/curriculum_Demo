@@ -68,5 +68,6 @@
   line-height: 17px;
   letter-spacing: 0;
   text-align: justify;
-  vertical-align:middle;display:table-cell;
+  vertical-align:middle;
+  display:table-cell;
 }
