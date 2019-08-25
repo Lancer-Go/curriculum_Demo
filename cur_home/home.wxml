@@ -1,2 +1,11 @@
-<!--cur_home/home.wxml-->
-<text>cur_home/home.wxml</text>
+<view id='body'>
+  <view class='load'>
+    <open-data type="userAvatarUrl"></open-data>
+    <open-data type="userNickName"></open-data>
+    <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">登陆         </button>
+    <view wx:else>请升级微信版本</view>
+  </view>
+  <view class='cur'>
+    <button style="font-size:13px" bindtap="gocur">查看课程表</button>
+  </view>
+</view>

@@ -1,0 +1,95 @@
+<!--cur_list/cur.wxml-->
+<view id="body">
+  <view id='th'>
+  <view class="empty"></view>
+  <view class="day">周日</view>
+  <view class="day">周一</view>
+  <view class="day">周二</view>
+  <view class="day">周三</view>
+  <view class="day">周四</view>
+  <view class="day">周五</view>
+  <view class="day">周六</view>
+  </view>
+  <view class="tr_class">
+    <view id="tr">
+    <view class="cur_num">1</view>
+    <view class="cur_num">2</view>
+    <view class="cur_num">3</view>
+    <view class="cur_num">4</view>
+    <view class="cur_num">5</view>
+    <view class="cur_num">6</view>
+    <view class="cur_num">7</view>
+    <view class="cur_num">8</view>
+    <view class="cur_num">9</view>
+    <view class="cur_num">0</view>
+    <view class="cur_num">A</view>
+    <view class="cur_num">B</view>
+    <view class="cur_num">C</view>
+    </view>
+    <view class="day_list">
+      <view class="list"><!-- list7 -->
+      <view class="math"></view>
+      <view class="math"></view>
+      <view class="math"></view>
+      <view class="math"></view>
+      <view class="math"></view>
+      <view class="math"></view>
+      <view class="math"></view>
+      </view>
+      <view class="list"><!-- list1 -->
+      <view class="math"></view>
+      <view class="math"></view>
+      <view class="math"></view>
+      <view class="math"><button class="buto_cur">微积分@讲堂二</button></view>
+      <view class="math"></view>
+      <view class="math"></view>
+      <view class="math"></view>
+      </view>
+      <view class="list"><!-- list2 -->
+      <view class="math"></view>
+      <view class="math"></view>
+      <view class="math"><button class="buto_cur">化学课@讲堂五</button></view>
+      <view class="math"></view>
+      <view class="math"></view>
+      <view class="math"></view>
+      <view class="math"></view>
+      </view>
+      <view class="list"><!-- list3 -->
+      <view class="math"></view>
+      <view class="math"></view>
+      <view class="math"></view>
+      <view class="math"></view>
+      <view class="math"></view>
+      <view class="math"></view>
+      <view class="math"></view>
+      </view>
+      <view class="list"><!-- list4 -->
+      <view class="math"></view>
+      <view class="math"></view>
+      <view class="math"></view>
+      <view class="math"></view>
+      <view class="math"></view>
+      <view class="math"></view>
+      <view class="math"></view>
+      </view>
+      <view class="list"><!-- list5 -->
+      <view class="math"><button class="buto_cur">数学课@讲堂二</button></view>
+      <view class="math"></view>
+      <view class="math"></view>
+      <view class="math"></view>
+      <view class="math"></view>
+      <view class="math"><button class="buto_cur">数学课@E201</button></view>
+      <view class="math"></view>
+      </view>
+      <view class="list"><!-- list6 -->
+      <view class="math"></view>
+      <view class="math"></view>
+      <view class="math"></view>
+      <view class="math"></view>
+      <view class="math"><button class="buto_cur">计算机导论@讲堂三</button></view>
+      <view class="math"></view>
+      <view class="math"></view>
+      </view>
+    </view>
+  </view>
+</view>
