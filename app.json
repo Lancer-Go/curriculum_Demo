@@ -1,7 +1,8 @@
 {
   "pages": [
     "cur_home/home",
-    "cur_list/cur"
+    "cur_list/cur",
+    "cur_list/cur_detail/detail"
   ],
   "sitemapLocation": "sitemap.json"
 }

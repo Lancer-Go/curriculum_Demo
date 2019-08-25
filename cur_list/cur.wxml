@@ -40,7 +40,7 @@
       <view class="math"></view>
       <view class="math"></view>
       <view class="math"></view>
-      <view class="math"><button class="buto_cur">微积分@讲堂二</button></view>
+      <view class="math"><button class="buto_cur" bindtap="gocur">{{cur_l2_d.name}}@{{cur_l2_d.adress}}</button></view>
       <view class="math"></view>
       <view class="math"></view>
       <view class="math"></view>
@@ -48,7 +48,7 @@
       <view class="list"><!-- list2 -->
       <view class="math"></view>
       <view class="math"></view>
-      <view class="math"><button class="buto_cur">化学课@讲堂五</button></view>
+      <view class="math"><button class="buto_cur" bindtap="gocur">{{cur_l1_d.name}}@{{cur_l1_d.adress}}</button></view>
       <view class="math"></view>
       <view class="math"></view>
       <view class="math"></view>
@@ -73,12 +73,12 @@
       <view class="math"></view>
       </view>
       <view class="list"><!-- list5 -->
-      <view class="math"><button class="buto_cur">数学课@讲堂二</button></view>
+      <view class="math"><button class="buto_cur" bindtap="gocur">{{cur_l3_d.name}}@{{cur_l3_d.adress}}</button></view>
       <view class="math"></view>
       <view class="math"></view>
       <view class="math"></view>
       <view class="math"></view>
-      <view class="math"><button class="buto_cur">数学课@E201</button></view>
+      <view class="math"><button class="buto_cur" bindtap="gocur">{{cur_l4_d.name}}@{{cur_l4_d.adress}}</button></view>
       <view class="math"></view>
       </view>
       <view class="list"><!-- list6 -->
@@ -86,7 +86,7 @@
       <view class="math"></view>
       <view class="math"></view>
       <view class="math"></view>
-      <view class="math"><button class="buto_cur">计算机导论@讲堂三</button></view>
+      <view class="math"><button class="buto_cur" bindtap="gocur">{{cur_l4_d.name}}@{{cur_l5_d.adress}}</button></view>
       <view class="math"></view>
       <view class="math"></view>
       </view>
