@@ -4,18 +4,26 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
+		"coverView": true,
 		"autoAudits": false,
-		"coverView": true
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
 	},
 	"compileType": "curriculum_Demo",
 	"libVersion": "2.8.0",
-	"appid": "wxe5ff8f90ab254c3d",
-	"projectname": "curriculum",
+	"appid": "wx06e18cbf34347d79",
+	"projectname": "curriculum_Demo",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

@@ -1,9 +1,9 @@
 <view id="body">
-  <view class="cur_name">{{cur_l1.name}}</view>
-  <view class="cur_de"><text class="head">班号</text><text class="content">{{cur_l1.class_num}}</text></view>
-  <view class="cur_de"><text class="head">学分</text><text class="content">{{cur_l1.scroe}}</text></view>
-  <view class="cur_de"><text class="head">教室</text><text class="content">{{cur_l1.adress}}</text></view>
-  <view class="cur_de"><text class="head">教师</text><text class="content">{{cur_l1.teacher}}</text></view>
-  <view class="cur_de"><text class="head">时间</text><text class="content">{{cur_l1.time}}</text></view>
+  <view class="cur_name">{{name}}</view>
+  <view class="cur_de"><text class="head">班号</text><text class="content">{{class_num}}</text></view>
+  <view class="cur_de"><text class="head">学分</text><text class="content">{{scroe}}</text></view>
+  <view class="cur_de"><text class="head">教室</text><text class="content">{{adress}}</text></view>
+  <view class="cur_de"><text class="head">教师</text><text class="content">{{teacher}}</text></view>
+  <view class="cur_de"><text class="head">时间</text><text class="content">{{time}}</text></view>
   <button style="background-color:orange;width:90%">查看班级同学</button>
 </view>

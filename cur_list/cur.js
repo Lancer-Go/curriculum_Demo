@@ -1,40 +1,36 @@
 // cur_list/cur.js
+const app = getApp()
 Page({
+  data:{
+     cur_de:[],
+     cur:3
+  },
   onLoad: function () {
-    //设置数据 只接收json数据类型
-    this.setData({
-      cur_l1_d: cur_l1,
-      cur_l2_d: cur_l2,
-      cur_l3_d: cur_l3,
-      cur_l4_d: cur_l4
+    var that = this;
+    wx.request({
+      url: 'https://www.easy-mock.com/mock/5d6406db0063876559c248c3/Detail/cur_de',
+      data: {
+      },
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        console.log(res.data)
+        var cur_det = res.data.course
+        console.log(cur_det),
+          that.setData({
+            cur_de: cur_det
+          })
+      }
     })
   },
-  gocur: function () {
+  gocur: function (e) {
+    var that=this
+    var num = e.target.dataset.index
     wx.navigateTo({
-      url: '../cur_list/cur_detail/detail',
-    })
+      url: '../cur_list/cur_detail/detail'
+    }),
+    app.globalData.cur = num/*重点理解的地方，这个地方非常不了解，如何赋值等*/
+    console.log(app.globalData.cur)
   }
 })
-var cur_l1= {
-  name: '化学课',
-  adress: '讲堂五',
-  class_num: '15611',
-  scroe: '2',
-  teacher: 'Mary',
-  time: '周一'
-}
-var  cur_l2= {
-  name: '微积分',
-  adress: '讲堂二'
-}
-var cur_l3={
-  name: '数学课',
-  adress: 'E201'
-}
-var cur_l4= {
-  name: '计算机导论',
-  adress: '讲堂三'
-}
-module.exports = {
-  clas_detail: cur_l1
-}
