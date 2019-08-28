@@ -1,5 +1,5 @@
 // cur_list/cur_detail/detail.js
-const app = getApp()
+const app = getApp()/*使用全局变量可以更改选择的页面，因此可以随时更新相应的课程 */
 Page({
 
   /**

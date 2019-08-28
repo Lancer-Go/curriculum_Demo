@@ -1,7 +1,8 @@
-<!--cur_list/cur.wxml-->
-<view id="body">
-  <view id='th'>
-  <view class="empty"></view>
+<swiper id="wx-swiper">
+<swiper-item><!--第1周-->
+<view class="body">
+  <view class='th'>
+  <view class="empty">周1</view>
   <view class="day">周日</view>
   <view class="day">周一</view>
   <view class="day">周二</view>
@@ -11,7 +12,7 @@
   <view class="day">周六</view>
   </view>
   <view class="tr_class">
-    <view id="tr">
+    <view class="tr">
     <view class="cur_num">1</view>
     <view class="cur_num">2</view>
     <view class="cur_num">3</view>
@@ -28,110 +29,664 @@
     </view>
     <view class="day_list">
       <view class="list"><!-- list7 -->
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周日'}}"><button class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周日'}}"><button class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周日'}}"><button class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周日'}}"><button class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周日'}}"><button class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周日'}}"><button class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
     </view>
       <view class="list"><!-- list1 -->
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周一'}}" bindtap="gocur"><button class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周一'&&item.week=='1'}}" bindtap="gocur"><button class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}"wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
       </view>
       <view class="list"><!-- list2 -->
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}} " bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}} " bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
       </view>
       <view class="list"><!-- list3 -->
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
       </view>
       <view class="list"><!-- list4 -->
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
       </view>
       <view class="list"><!-- list5 -->
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}} " bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}} " bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
       </view>
       <view class="list"><!-- list6 -->
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{cur_l4_d.name}}@{{cur_l5_d.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}} " bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
-      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{cur_l4_d.name}}@{{cur_l5_d.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}} " bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
       </view>
     </view>
   </view>
 </view>
+</swiper-item>
+<swiper-item><!--第2周-->
+<view class="body">
+  <view class='th'>
+  <view class="empty">周2</view>
+  <view class="day">周日</view>
+  <view class="day">周一</view>
+  <view class="day">周二</view>
+  <view class="day">周三</view>
+  <view class="day">周四</view>
+  <view class="day">周五</view>
+  <view class="day">周六</view>
+  </view>
+  <view class="tr_class">
+    <view class="tr">
+    <view class="cur_num">1</view>
+    <view class="cur_num">2</view>
+    <view class="cur_num">3</view>
+    <view class="cur_num">4</view>
+    <view class="cur_num">5</view>
+    <view class="cur_num">6</view>
+    <view class="cur_num">7</view>
+    <view class="cur_num">8</view>
+    <view class="cur_num">9</view>
+    <view class="cur_num">0</view>
+    <view class="cur_num">A</view>
+    <view class="cur_num">B</view>
+    <view class="cur_num">C</view>
+    </view>
+    <view class="day_list">
+      <view class="list"><!-- list7 -->
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周日'}}"><button class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周日'}}"><button class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周日'}}"><button class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+    </view>
+      <view class="list"><!-- list1 -->
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周一'&&item.week=='1'}}" bindtap="gocur"><button class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}"wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      </view>
+      <view class="list"><!-- list2 -->
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}} " bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      </view>
+      <view class="list"><!-- list3 -->
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      </view>
+      <view class="list"><!-- list4 -->
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      </view>
+      <view class="list"><!-- list5 -->
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}} " bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      </view>
+      <view class="list"><!-- list6 -->
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{cur_l4_d.name}}@{{cur_l5_d.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}} " bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      </view>
+    </view>
+  </view>
+</view>
+</swiper-item>
+<swiper-item> <!--第3周-->
+<view class="body">
+  <view class='th'>
+  <view class="empty">周3</view>
+  <view class="day">周日</view>
+  <view class="day">周一</view>
+  <view class="day">周二</view>
+  <view class="day">周三</view>
+  <view class="day">周四</view>
+  <view class="day">周五</view>
+  <view class="day">周六</view>
+  </view>
+  <view class="tr_class">
+    <view class="tr">
+    <view class="cur_num">1</view>
+    <view class="cur_num">2</view>
+    <view class="cur_num">3</view>
+    <view class="cur_num">4</view>
+    <view class="cur_num">5</view>
+    <view class="cur_num">6</view>
+    <view class="cur_num">7</view>
+    <view class="cur_num">8</view>
+    <view class="cur_num">9</view>
+    <view class="cur_num">0</view>
+    <view class="cur_num">A</view>
+    <view class="cur_num">B</view>
+    <view class="cur_num">C</view>
+    </view>
+    <view class="day_list">
+      <view class="list"><!-- list7 -->
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周日'}}"><button class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周日'}}"><button class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周日'}}"><button class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+    </view>
+      <view class="list"><!-- list1 -->
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周一'&&item.week=='1'}}" bindtap="gocur"><button class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}"wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      </view>
+      <view class="list"><!-- list2 -->
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}} " bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      </view>
+      <view class="list"><!-- list3 -->
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      </view>
+      <view class="list"><!-- list4 -->
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      </view>
+      <view class="list"><!-- list5 -->
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}} " bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      </view>
+      <view class="list"><!-- list6 -->
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{cur_l4_d.name}}@{{cur_l5_d.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}} " bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      </view>
+    </view>
+  </view>
+</view>
+</swiper-item>
+<swiper-item><!--第4周-->
+<view class="body">
+  <view class='th'>
+  <view class="empty">周4</view>
+  <view class="day">周日</view>
+  <view class="day">周一</view>
+  <view class="day">周二</view>
+  <view class="day">周三</view>
+  <view class="day">周四</view>
+  <view class="day">周五</view>
+  <view class="day">周六</view>
+  </view>
+  <view class="tr_class">
+    <view class="tr">
+    <view class="cur_num">1</view>
+    <view class="cur_num">2</view>
+    <view class="cur_num">3</view>
+    <view class="cur_num">4</view>
+    <view class="cur_num">5</view>
+    <view class="cur_num">6</view>
+    <view class="cur_num">7</view>
+    <view class="cur_num">8</view>
+    <view class="cur_num">9</view>
+    <view class="cur_num">0</view>
+    <view class="cur_num">A</view>
+    <view class="cur_num">B</view>
+    <view class="cur_num">C</view>
+    </view>
+    <view class="day_list">
+      <view class="list"><!-- list7 -->
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周日'}}"><button class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周日'}}"><button class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周日'}}"><button class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+    </view>
+      <view class="list"><!-- list1 -->
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周一'&&item.week=='1'}}" bindtap="gocur"><button class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}"wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      </view>
+      <view class="list"><!-- list2 -->
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}} " bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      </view>
+      <view class="list"><!-- list3 -->
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      </view>
+      <view class="list"><!-- list4 -->
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}" >{{item.name}}@{{item.adress}}</button></view>
+      </view>
+      <view class="list"><!-- list5 -->
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}} " bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      </view>
+      <view class="list"><!-- list6 -->
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{cur_l4_d.name}}@{{cur_l5_d.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}} " bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='0'}}">{{item.name}}@{{item.adress}}</button></view>
+      </view>
+    </view>
+  </view>
+</view>
+</swiper-item>
+<swiper-item> <!--第5周-->
+<view class="body">
+  <view class='th'>
+  <view class="empty">周5</view>
+  <view class="day">周日</view>
+  <view class="day">周一</view>
+  <view class="day">周二</view>
+  <view class="day">周三</view>
+  <view class="day">周四</view>
+  <view class="day">周五</view>
+  <view class="day">周六</view>
+  </view>
+  <view class="tr_class">
+    <view class="tr">
+    <view class="cur_num">1</view>
+    <view class="cur_num">2</view>
+    <view class="cur_num">3</view>
+    <view class="cur_num">4</view>
+    <view class="cur_num">5</view>
+    <view class="cur_num">6</view>
+    <view class="cur_num">7</view>
+    <view class="cur_num">8</view>
+    <view class="cur_num">9</view>
+    <view class="cur_num">0</view>
+    <view class="cur_num">A</view>
+    <view class="cur_num">B</view>
+    <view class="cur_num">C</view>
+    </view>
+    <view class="day_list">
+      <view class="list"><!-- list7 -->
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周日'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周日'}}"><button class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周日'}}"><button class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周日'}}"><button class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+    </view>
+      <view class="list"><!-- list1 -->
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周一'&&item.week=='1'}}" bindtap="gocur"><button class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}"wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周一'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      </view>
+      <view class="list"><!-- list2 -->
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}} " bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周二'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      </view>
+      <view class="list"><!-- list3 -->
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周三'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      </view>
+      <view class="list"><!-- list4 -->
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周四'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}" >{{item.name}}@{{item.adress}}</button></view>
+      </view>
+      <view class="list"><!-- list5 -->
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}} " bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}"wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周五'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      </view>
+      <view class="list"><!-- list6 -->
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='1'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='2'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='3'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='4'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='5'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{cur_l4_d.name}}@{{cur_l5_d.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='6'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='7'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='8'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}} " bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='9'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='0'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='A'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='B'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      <view class="h{{item.node}}" wx:for="{{cur_de}}" wx:if="{{item.node=='C'&&item.time=='周六'}}"><button  class="buto_cur c_h{{item.node_c}}"  data-index="{{index}}" bindtap="gocur" wx:if="{{item.week_both=='T'||item.week=='1'}}">{{item.name}}@{{item.adress}}</button></view>
+      </view>
+    </view>
+  </view>
+</view>
+</swiper-item>
+</swiper>

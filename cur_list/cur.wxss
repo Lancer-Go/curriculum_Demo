@@ -1,67 +1,73 @@
 /* cur_list/cur.wxss */
-#body{
-  width:100%;
-  height:100%;
+.body{
+  width:750rpx;
+  height:1136rpx;
   display:flex;
   flex-direction: column;
 }
-#th{
-  width:100%;
-  height:100%;
+#wx-swiper{
+  width: 750rpx;
+  height: 1136rpx; 
+  }
+.th{
+  width:750rpx;
+  height:64rpx;
   display:flex;
   justify-content: space-between;
 }
 .day{
-  width:13%;
-  height:10%;
-  border-bottom: 1rpx solid #ccc;
-  border-right: 1rpx solid #ccc;
+  width:97.5rpx;
+  height:64rpx;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
   text-align: center;
 }
 .empty{
-  width:10%;
+  width:81.5rpx;
+  height:64rpx;
   border-bottom: 1rpx solid #ccc;
   border-right: 1rpx solid #ccc;
   text-align: center;
 }
-#tr{
-  width:11%;
-  height: 100%;
+.tr{
+  width:82.5rpx;
+  height: 1072rpx;
   display:flex;
   flex-direction: column;
 }
 .cur_num{
   text-align: center;
+  width:77.3rpx;
   padding:0;
-  height:87rpx;
+  height:81.5rpx;
   border:1rpx solid #ccc;
-  line-height: 95rpx;
+  line-height: 85rpx;
 }
 
 .list{
   display:flex;
   flex-direction: column;
-  width:14%;
-  height:100%;
+  width:93rpx;
+  height:1072rpx;
 }
 .tr_class{
   display:flex;
   flex-direction: row;
-  width:100%;
-  height:100%
+  width:750rpx;
+  height:1072rpx;
 }
 .day_list{
   display:flex;
   flex-direction: row;
-  width:100%;
-  height:100%;
+  width:667.5rpx;
+  height:1072rpx;
   justify-content: space-between;
 }
 .buto_cur{
   margin-top: 10rpx;
-  padding: 20rpx;
+  padding: 10rpx;
   font-size: 22rpx;
-  height:100%;
+  height:80.5rpx;
   line-height: 30rpx;
   letter-spacing: 0;
   text-align: justify;
@@ -69,48 +75,48 @@
   display:table-cell;
 }
 .h1{
-  margin-top:0rpx;
+  margin-top:0rpx;  
 }
 .h2{
-  margin-top:87rpx         /*一节课87rpx*/
+  margin-top:80.5rpx         /*一节课87rpx*/
 }
 .h3{
-  margin-top:174rpx
+  margin-top:164rpx
 }
 .h4{
-  margin-top:261rpx
+  margin-top:247.5rpx
 }
 .h5{
-  margin-top:348rpx
+  margin-top:331rpx
 }
 .h6{
-  margin-top:435rpx
+  margin-top:414.5rpx
 }
 .h7{
-  margin-top:522rpx
+  margin-top:498rpx
 }
 .h8{
-  margin-top:609rpx
+  margin-top:581.5rpx
 }
 .h9{
-  margin-top:696rpx
+  margin-top:665rpx
 }
 .h0{
-  margin-top:783rpx
+  margin-top:748.5rpx
 }
 .hA{
-  margin-top:880rpx
+  margin-top:832rpx
 }
 .hB{
-  margin-top:957rpx;
+  margin-top:915.5rpx;
   margin-bottom:0;
 }
 .hC{
-  margin-top:1044rpx
+  margin-top:999rpx
 }
 .c_h2{/*一节课的长度*/
-  height:174rpx
+  height:165rpx
 }
 .c_h3{
-  height:261rpx
+  height:241.5rpx
 }

@@ -1,5 +1,5 @@
 // cur_list/cur.js
-const app = getApp()
+const app = getApp();
 Page({
   data:{
      cur_de:[],
